@@ -83,7 +83,7 @@ function App() {
         <DetalleVideojuego
           videojuego={videojuegoSeleccionado}
           onClose={() => setVideojuegoSeleccionado(null)}
-          onEliminar={eliminarVideojuego} // Pasar la función de eliminar
+          onEliminar={eliminarVideojuego}
         />
       )}
     </div>

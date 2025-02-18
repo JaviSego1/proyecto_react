@@ -8,7 +8,7 @@ function DetalleVideojuego({ videojuego, onClose, onEliminar }) {
       <p>{videojuego.descripcion}</p>
       <p>Fecha de lanzamiento: {videojuego.fecha_lanzamiento}</p>
       <p>Compañía: {videojuego.compania}</p>
-      <p>Precio: ${videojuego.precio}</p>
+      <p>Precio: {videojuego.precio} €</p>
       <button onClick={onClose}>Cerrar</button>
       <button onClick={() => onEliminar(videojuego.id)}>Eliminar</button>
     </div>
