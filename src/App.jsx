@@ -32,14 +32,11 @@ function App() {
 
   // Función para eliminar un videojuego del backend y del estado
   const eliminarVideojuego = (id) => {
-    // Eliminar del backend
     fetch(`http://localhost:3001/videojuegos/${id}`, {
       method: "DELETE",
     })
       .then(() => {
-        // Eliminar del estado local
         setVideojuegos(videojuegos.filter((videojuego) => videojuego.id !== id));
-        // Si el videojuego eliminado es el que está seleccionado, lo deseleccionamos
         if (videojuegoSeleccionado?.id === id) {
           setVideojuegoSeleccionado(null);
         }

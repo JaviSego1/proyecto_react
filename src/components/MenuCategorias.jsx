@@ -1,7 +1,7 @@
 import React from "react";
 
 function MenuCategorias({ categorias, categoriasSeleccionadas, setCategoriasSeleccionadas }) {
-  const handleChange = (catId) => {
+  const cambio = (catId) => {
     if (categoriasSeleccionadas.includes(catId)) {
       setCategoriasSeleccionadas(categoriasSeleccionadas.filter((id) => id !== catId));
     } else {
@@ -17,7 +17,7 @@ function MenuCategorias({ categorias, categoriasSeleccionadas, setCategoriasSele
           <input
             type="checkbox"
             checked={categoriasSeleccionadas.includes(categoria.id)}
-            onChange={() => handleChange(categoria.id)}
+            onChange={() => cambio(categoria.id)}
           />
           {categoria.nombre}
         </label>

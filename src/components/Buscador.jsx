@@ -5,7 +5,6 @@ function Buscador({ terminoBusqueda, setTerminoBusqueda }) {
     <div>
       <input
         type="text"
-        placeholder="Buscar videojuegos..."
         value={terminoBusqueda}
         onChange={(e) => setTerminoBusqueda(e.target.value)}
       />
